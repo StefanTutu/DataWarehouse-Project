@@ -1,0 +1,17 @@
+C:\Users\Stef\Desktop\Depozite de date\Interfata\Interfata\bin\Debug\Interfata.exe.config
+C:\Users\Stef\Desktop\Depozite de date\Interfata\Interfata\bin\Debug\Interfata.exe
+C:\Users\Stef\Desktop\Depozite de date\Interfata\Interfata\bin\Debug\Interfata.pdb
+C:\Users\Stef\Desktop\Depozite de date\Interfata\Interfata\bin\Debug\Interfata.xml
+C:\Users\Stef\Desktop\Depozite de date\Interfata\Interfata\obj\Debug\Interfata.vbprojResolveAssemblyReference.cache
+C:\Users\Stef\Desktop\Depozite de date\Interfata\Interfata\obj\Debug\Interfata.Resources.resources
+C:\Users\Stef\Desktop\Depozite de date\Interfata\Interfata\obj\Debug\Interfata.Predictie.resources
+C:\Users\Stef\Desktop\Depozite de date\Interfata\Interfata\obj\Debug\Interfata.vbproj.GenerateResource.Cache
+C:\Users\Stef\Desktop\Depozite de date\Interfata\Interfata\obj\Debug\Interfata.exe
+C:\Users\Stef\Desktop\Depozite de date\Interfata\Interfata\obj\Debug\Interfata.xml
+C:\Users\Stef\Desktop\Depozite de date\Interfata\Interfata\obj\Debug\Interfata.pdb
+C:\Users\Stef\Desktop\Depozite de date\Interfata\Interfata\obj\Debug\Interfata.Main.resources
+C:\Users\Stef\Desktop\Depozite de date\Interfata\Interfata\obj\Debug\Interfata.Predictie2.resources
+D:\FEAA\Master - SIA\An 1\Sem 2\Depozite de date\Depozite de date\Interfata\Interfata\bin\Debug\Interfata.exe.config
+D:\FEAA\Master - SIA\An 1\Sem 2\Depozite de date\Depozite de date\Interfata\Interfata\obj\Debug\Interfata.exe
+D:\FEAA\Master - SIA\An 1\Sem 2\Depozite de date\Depozite de date\Interfata\Interfata\obj\Debug\Interfata.xml
+D:\FEAA\Master - SIA\An 1\Sem 2\Depozite de date\Depozite de date\Interfata\Interfata\obj\Debug\Interfata.pdb

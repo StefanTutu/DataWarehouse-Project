@@ -1,0 +1,20 @@
+C:\Users\Stef\Desktop\Depozite de date\Predicition\Predicition\bin\Debug\Predicition.exe.config
+C:\Users\Stef\Desktop\Depozite de date\Predicition\Predicition\bin\Debug\Predicition.exe
+C:\Users\Stef\Desktop\Depozite de date\Predicition\Predicition\bin\Debug\Predicition.pdb
+C:\Users\Stef\Desktop\Depozite de date\Predicition\Predicition\obj\Debug\Predicition.csprojResolveAssemblyReference.cache
+C:\Users\Stef\Desktop\Depozite de date\Predicition\Predicition\obj\Debug\Predicition.Form1.resources
+C:\Users\Stef\Desktop\Depozite de date\Predicition\Predicition\obj\Debug\Predicition.Properties.Resources.resources
+C:\Users\Stef\Desktop\Depozite de date\Predicition\Predicition\obj\Debug\Predicition.csproj.GenerateResource.Cache
+C:\Users\Stef\Desktop\Depozite de date\Predicition\Predicition\obj\Debug\Predicition.exe
+C:\Users\Stef\Desktop\Depozite de date\Predicition\Predicition\obj\Debug\Predicition.pdb
+C:\Users\Stef\Desktop\Depozite de date\Predicition\Predicition\obj\Debug\Predicition.Form2.resources
+D:\FEAA\Master - SIA\An 1\Sem 2\Depozite de date\Depozite de date\Predicition\Predicition\bin\Debug\Predicition.exe.config
+D:\FEAA\Master - SIA\An 1\Sem 2\Depozite de date\Depozite de date\Predicition\Predicition\obj\Debug\Predicition.exe
+D:\FEAA\Master - SIA\An 1\Sem 2\Depozite de date\Depozite de date\Predicition\Predicition\obj\Debug\Predicition.pdb
+D:\FEAA\Master - SIA\An 1\Sem 2\Depozite de date\Depozite de date\Predicition\Predicition\bin\Debug\Predicition.exe
+D:\FEAA\Master - SIA\An 1\Sem 2\Depozite de date\Depozite de date\Predicition\Predicition\bin\Debug\Predicition.pdb
+D:\FEAA\Master - SIA\An 1\Sem 2\Depozite de date\Depozite de date\Predicition\Predicition\obj\Debug\Predicition.csprojResolveAssemblyReference.cache
+D:\FEAA\Master - SIA\An 1\Sem 2\Depozite de date\Depozite de date\Predicition\Predicition\obj\Debug\Predicition.Form1.resources
+D:\FEAA\Master - SIA\An 1\Sem 2\Depozite de date\Depozite de date\Predicition\Predicition\obj\Debug\Predicition.Form2.resources
+D:\FEAA\Master - SIA\An 1\Sem 2\Depozite de date\Depozite de date\Predicition\Predicition\obj\Debug\Predicition.Properties.Resources.resources
+D:\FEAA\Master - SIA\An 1\Sem 2\Depozite de date\Depozite de date\Predicition\Predicition\obj\Debug\Predicition.csproj.GenerateResource.Cache

@@ -1,0 +1,19 @@
+C:\Users\Stef\Desktop\Depozite de date\OLAP\OLAP\bin\Debug\OLAP.exe.config
+C:\Users\Stef\Desktop\Depozite de date\OLAP\OLAP\obj\Debug\OLAP.vbprojResolveAssemblyReference.cache
+C:\Users\Stef\Desktop\Depozite de date\OLAP\OLAP\obj\Debug\OLAP.OLAP.resources
+C:\Users\Stef\Desktop\Depozite de date\OLAP\OLAP\obj\Debug\OLAP.Resources.resources
+C:\Users\Stef\Desktop\Depozite de date\OLAP\OLAP\obj\Debug\OLAP.vbproj.GenerateResource.Cache
+C:\Users\Stef\Desktop\Depozite de date\OLAP\OLAP\bin\Debug\OLAP.exe
+C:\Users\Stef\Desktop\Depozite de date\OLAP\OLAP\bin\Debug\OLAP.pdb
+C:\Users\Stef\Desktop\Depozite de date\OLAP\OLAP\bin\Debug\OLAP.xml
+C:\Users\Stef\Desktop\Depozite de date\OLAP\OLAP\obj\Debug\OLAP.exe
+C:\Users\Stef\Desktop\Depozite de date\OLAP\OLAP\obj\Debug\OLAP.xml
+C:\Users\Stef\Desktop\Depozite de date\OLAP\OLAP\obj\Debug\OLAP.pdb
+D:\FEAA\Master - SIA\An 1\Sem 2\Depozite de date\Depozite de date\OLAP\OLAP\bin\Debug\OLAP.exe.config
+D:\FEAA\Master - SIA\An 1\Sem 2\Depozite de date\Depozite de date\OLAP\OLAP\obj\Debug\OLAP.exe
+D:\FEAA\Master - SIA\An 1\Sem 2\Depozite de date\Depozite de date\OLAP\OLAP\obj\Debug\OLAP.xml
+D:\FEAA\Master - SIA\An 1\Sem 2\Depozite de date\Depozite de date\OLAP\OLAP\obj\Debug\OLAP.pdb
+D:\FEAA\Master - SIA\An 1\Sem 2\Depozite de date\Depozite de date\OLAP\OLAP\obj\Debug\OLAP.vbprojResolveAssemblyReference.cache
+D:\FEAA\Master - SIA\An 1\Sem 2\Depozite de date\Depozite de date\OLAP\OLAP\obj\Debug\OLAP.OLAP.resources
+D:\FEAA\Master - SIA\An 1\Sem 2\Depozite de date\Depozite de date\OLAP\OLAP\obj\Debug\OLAP.Resources.resources
+D:\FEAA\Master - SIA\An 1\Sem 2\Depozite de date\Depozite de date\OLAP\OLAP\obj\Debug\OLAP.vbproj.GenerateResource.Cache

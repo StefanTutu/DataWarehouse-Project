@@ -1,0 +1,668 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="47ae7cce-fc64-4b88-acae-3d6c72939a29" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Cubul Data Mining</ID>
+  <Name>Cubul Data Mining</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="f9ec7591-00cb-4826-a59a-980e15b891ef">
+      <ID>v Assoc Seq Line Items</ID>
+      <Name>v Assoc Seq Line Items</Name>
+      <DimensionID>v Assoc Seq Line Items</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="2e2d078b-d601-419f-a9c9-36ed5f3db846">
+          <AttributeID>Line Number</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="aa941e33-d4e1-442f-9c58-f6e325d1bf24">
+      <ID>v Assoc Seq Orders</ID>
+      <Name>v Assoc Seq Orders</Name>
+      <DimensionID>v Assoc Seq Orders</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="120ddb71-7753-4e9a-8225-23abf4b7efb1">
+          <AttributeID>Customer Key</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="83f58e98-3e8f-4491-bc32-cef317ae86a5">
+      <ID>v DM Prep</ID>
+      <Name>v DM Prep</Name>
+      <DimensionID>v DM Prep</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="9f07348d-a920-4b96-b83b-78c7032bc2d4">
+          <AttributeID>Quantity</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="9a8473a0-5ef2-45b0-8d02-f8e2899e8e51">
+      <ID>v Target Mail</ID>
+      <Name>v Target Mail</Name>
+      <DimensionID>v Target Mail</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="0c3ad8c2-68db-472f-8472-7c8b6caf5a02">
+          <AttributeID>Customer Key</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="074c2b4f-291a-4575-955a-e23b4f49f78b">
+      <ID>v Time Series</ID>
+      <Name>v Time Series</Name>
+      <DimensionID>v Time Series</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="529e060f-9494-4903-a5fb-3b1ab36c80cf">
+          <AttributeID>Time Index</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="45a49680-96e4-4ce1-8545-55bf624c3ac7">
+      <ID>Prospective Buyer</ID>
+      <Name>Prospective Buyer</Name>
+      <DimensionID>Prospective Buyer</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="21bc65a6-1bd0-41c0-b2c5-0299eee84c8e">
+          <AttributeID>Prospective Buyer Key</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="992f5838-4428-4c6d-a31c-505876ca05a9">
+      <ID>v Assoc Seq Line Items</ID>
+      <Name>v Assoc Seq Line Items</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="d9a60e81-bdf8-4af0-85f4-92ccd1987ef1">
+          <ID>Line Number</ID>
+          <Name>Line Number</Name>
+          <Source dwd:design-time-name="65dc253f-65a9-40a0-8dae-a50b5374f681">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="c432981a-b4ce-48cb-b01b-016c30124e65">
+              <TableID>dbo_vAssocSeqLineItems</TableID>
+              <ColumnID>LineNumber</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="137f03fd-9463-40f5-865f-cf761e7269f2">
+          <ID>v Assoc Seq Line Items Count</ID>
+          <Name>v Assoc Seq Line Items Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="138302af-77d0-40e0-be33-f8c8eb86be0a">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="3bd8e0b8-2ba9-4d77-a3a1-9985d0f62dcc">
+              <TableID>dbo_vAssocSeqLineItems</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d9faa993-23d6-4337-8546-a6ded32d40ee">
+          <CubeDimensionID>v Assoc Seq Line Items</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="dbc86869-37cb-46ec-9107-769d08eb0da2">
+              <AttributeID>Line Number</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="289bc7f6-2516-4f84-9231-a33bc765d11f">
+                  <DataType>UnsignedTinyInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="fdab492a-6d78-4288-abc5-9dff206f90c1">
+                    <TableID>dbo_vAssocSeqLineItems</TableID>
+                    <ColumnID>LineNumber</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="8e3cc1fe-f647-45d0-8e3f-6110abad22d0">
+      <ID>v Assoc Seq Orders</ID>
+      <Name>v Assoc Seq Orders</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="9ce07a3e-f27e-4547-b46f-962762cb5545">
+          <ID>v Assoc Seq Orders Count</ID>
+          <Name>v Assoc Seq Orders Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="c2809529-3731-42ba-96eb-25a5dc652467">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="95c7f992-0f2b-4562-b037-cd29bbc08a5a">
+              <TableID>dbo_vAssocSeqOrders</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="bea86ae3-fb21-4a85-83a0-0ae85364c5ea">
+          <CubeDimensionID>v Assoc Seq Orders</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="a757403b-b2f9-4f7f-863e-c6fd282f80f3">
+              <AttributeID>Customer Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d70cb84d-ff3e-4f83-ba59-80db78e9c8f6">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b992a01e-85a9-463d-9e6d-f577b374cb0f">
+                    <TableID>dbo_vAssocSeqOrders</TableID>
+                    <ColumnID>CustomerKey</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="75284073-2a6c-4df2-a971-4bd2170dca70">
+      <ID>v DM Prep</ID>
+      <Name>v DM Prep</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="095fe956-2865-4056-8953-84117540e28b">
+          <ID>Customer Key</ID>
+          <Name>Customer Key</Name>
+          <Source dwd:design-time-name="fe1509b4-db2c-4d91-975d-95c6385cb1e4">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="49e0d461-4269-4675-9ea7-9b252c002119">
+              <TableID>dbo_vDMPrep</TableID>
+              <ColumnID>CustomerKey</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="52206fbb-4ed7-47dc-8fe7-f5a237969bcf">
+          <ID>Age</ID>
+          <Name>Age</Name>
+          <Source dwd:design-time-name="c0c45526-4d00-4ec6-871d-4c6842f1e4e4">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="795b2cda-5229-4067-b271-560248d59d4c">
+              <TableID>dbo_vDMPrep</TableID>
+              <ColumnID>Age</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="8e0f7c73-b150-4c9a-8234-3a8a3d15ef06">
+          <ID>Calendar Year</ID>
+          <Name>Calendar Year</Name>
+          <Source dwd:design-time-name="3cdda0ec-f7e5-4fee-9a2c-e0719479c2c4">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="b22c86df-9498-49bd-9868-d4cae28f4ae1">
+              <TableID>dbo_vDMPrep</TableID>
+              <ColumnID>CalendarYear</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="54fa1a9c-49fa-42b1-a874-c02c25809db0">
+          <ID>Fiscal Year</ID>
+          <Name>Fiscal Year</Name>
+          <Source dwd:design-time-name="b7d345ce-2e69-481d-9ab1-e145fe0945d6">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6b242f29-a6ef-4d0f-90e5-3942d7abba4f">
+              <TableID>dbo_vDMPrep</TableID>
+              <ColumnID>FiscalYear</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="2f3ed12a-bad8-4414-8950-c2543088afde">
+          <ID>Month</ID>
+          <Name>Month</Name>
+          <Source dwd:design-time-name="84cd0e2e-8402-41d8-ad71-effc9780ed59">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="3ce12a89-12a3-4ec8-8ba3-3d3870d4851a">
+              <TableID>dbo_vDMPrep</TableID>
+              <ColumnID>Month</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="7bc03813-5a43-496c-b8e2-d28019ee1d29">
+          <ID>Line Number - v DM Prep</ID>
+          <Name>Line Number - v DM Prep</Name>
+          <Source dwd:design-time-name="00b7e92b-c0be-47ca-942b-2ffd626dd2ce">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="abf658e9-4005-493c-bf8b-7db027e20f14">
+              <TableID>dbo_vDMPrep</TableID>
+              <ColumnID>LineNumber</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="649d6c27-b73e-4211-b54b-13d9443558ed">
+          <ID>Quantity</ID>
+          <Name>Quantity</Name>
+          <Source dwd:design-time-name="2f810317-abc5-4af0-9419-b07a3d0ebdc7">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="65d21cab-f45f-443b-b778-cc33e98a7a5f">
+              <TableID>dbo_vDMPrep</TableID>
+              <ColumnID>Quantity</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="f88d9e14-7dc3-4da3-84ec-24a404e10ea2">
+          <ID>Amount</ID>
+          <Name>Amount</Name>
+          <Source dwd:design-time-name="3e6d99b9-4697-491d-84b3-6a0db6d0b008">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="543c993a-f378-4bbf-a527-c6d071f06cf9">
+              <TableID>dbo_vDMPrep</TableID>
+              <ColumnID>Amount</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="52023b89-8b9a-4429-84ee-d24b5eb2f5dd">
+          <ID>v DM Prep Count</ID>
+          <Name>v DM Prep Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="d06e708f-2645-42a3-ad54-d8d6953ef7e0">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="3df86c91-ef12-4024-bcbf-7eeabb574ae4">
+              <TableID>dbo_vDMPrep</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6fc3e97c-bc11-4387-808b-98cb9c8ae483">
+          <CubeDimensionID>v DM Prep</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="166d7cde-8ec9-47a3-b0f1-d06d101a0813">
+              <AttributeID>Quantity</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="afd5d195-b7cd-43be-be5c-3b1d07d16cd4">
+                  <DataType>SmallInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2b9323f5-f05a-4680-9f49-181a5ccef077">
+                    <TableID>dbo_vDMPrep</TableID>
+                    <ColumnID>Quantity</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="cc389706-934e-4303-80dd-974dcf1cbcbc">
+      <ID>v Target Mail</ID>
+      <Name>v Target Mail</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="91773bae-c3f3-4688-b8c2-3992ed79c7a3">
+          <ID>Geography Key</ID>
+          <Name>Geography Key</Name>
+          <Source dwd:design-time-name="470d3684-4950-4683-a9f9-8f9e2e5aeb2e">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="938cc4ec-394f-4e17-bece-6aafafd7b51d">
+              <TableID>dbo_vTargetMail</TableID>
+              <ColumnID>GeographyKey</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="61b1c192-d06c-4b78-ba0f-3f284496fbab">
+          <ID>Yearly Income</ID>
+          <Name>Yearly Income</Name>
+          <Source dwd:design-time-name="73493b9b-4222-4602-91d4-695341d38386">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="8dd979fe-be5c-4893-8e75-2047a950ed87">
+              <TableID>dbo_vTargetMail</TableID>
+              <ColumnID>YearlyIncome</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="a921794e-10f2-46d3-ab66-29fdf72a8cbd">
+          <ID>Total Children</ID>
+          <Name>Total Children</Name>
+          <Source dwd:design-time-name="d6faa3e0-9da4-4943-beba-b9a7e6725d05">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="1b2bba40-315d-4b88-858a-3ec73264d718">
+              <TableID>dbo_vTargetMail</TableID>
+              <ColumnID>TotalChildren</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="5a84f806-355f-4d12-84cb-d924ee2ba2f5">
+          <ID>Number Children At Home</ID>
+          <Name>Number Children At Home</Name>
+          <Source dwd:design-time-name="f3cfafba-2e51-4685-b888-10b82002cbeb">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6cc8a9e5-af75-4e22-b538-096023e3f733">
+              <TableID>dbo_vTargetMail</TableID>
+              <ColumnID>NumberChildrenAtHome</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="8c5484e4-c5f5-4e92-94af-3c2b1a126fb1">
+          <ID>Number Cars Owned</ID>
+          <Name>Number Cars Owned</Name>
+          <Source dwd:design-time-name="ad615aa1-c5fc-4cca-b210-eb81b4d75b5a">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6a0e934d-9513-481f-a0cb-551eccf05ba3">
+              <TableID>dbo_vTargetMail</TableID>
+              <ColumnID>NumberCarsOwned</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="0212c81f-f779-4b14-aab5-4d8d752ddfbc">
+          <ID>Age - v Target Mail</ID>
+          <Name>Age - v Target Mail</Name>
+          <Source dwd:design-time-name="e21cc474-0a6a-4ada-98b0-09a7e335b1ef">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="cb3231f3-58af-49ca-932c-f14e822c0e62">
+              <TableID>dbo_vTargetMail</TableID>
+              <ColumnID>Age</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="3499920a-58f2-4810-916f-1d951be90b01">
+          <ID>Bike Buyer</ID>
+          <Name>Bike Buyer</Name>
+          <Source dwd:design-time-name="92c10663-a322-4350-a317-1c112344b6fd">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="c72802d0-377a-4333-8e32-f041909ba0ca">
+              <TableID>dbo_vTargetMail</TableID>
+              <ColumnID>BikeBuyer</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="9b145737-f1f4-42d6-a702-22edbf4c3db9">
+          <ID>v Target Mail Count</ID>
+          <Name>v Target Mail Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="fa8e52c7-752b-4fa1-ac0e-0d8abfdc3416">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="000ff740-ec36-46a0-9aef-aa00826c5527">
+              <TableID>dbo_vTargetMail</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="3383f3e0-2543-472f-8021-ef232a67a162">
+          <CubeDimensionID>v Target Mail</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e480851c-03a0-4b43-9f34-9d6f5fc8f9a5">
+              <AttributeID>Customer Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="3b6e0b05-11a4-4514-a0c2-f0ca637ce887">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="bf025035-49b3-48b1-a1ae-66a33aae2a1c">
+                    <TableID>dbo_vTargetMail</TableID>
+                    <ColumnID>CustomerKey</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="a87ea0ad-b608-4621-b774-6df48fd393be">
+      <ID>v Time Series</ID>
+      <Name>v Time Series</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="9be3a567-13b1-490a-a056-78650f386513">
+          <ID>Time Index</ID>
+          <Name>Time Index</Name>
+          <Source dwd:design-time-name="44ae8f80-ac43-4a6a-9520-0096ac781bc9">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="e6b7eae5-cf13-4b1b-b0b1-618746842b11">
+              <TableID>dbo_vTimeSeries</TableID>
+              <ColumnID>TimeIndex</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="d7429ad4-6b6a-45d0-a573-0b8c2cd18436">
+          <ID>Quantity - v Time Series</ID>
+          <Name>Quantity - v Time Series</Name>
+          <Source dwd:design-time-name="85d2b79f-0a60-4a21-b36b-46aa85d9fe44">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="4d49c119-0876-4b35-86ad-edcfc910e08c">
+              <TableID>dbo_vTimeSeries</TableID>
+              <ColumnID>Quantity</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="b1ddd0c0-6046-4d39-b955-26f9b3706a92">
+          <ID>Amount - v Time Series</ID>
+          <Name>Amount - v Time Series</Name>
+          <Source dwd:design-time-name="5fdef847-8043-48ed-ab79-3e7b3a45afc7">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="9adb877c-e1a2-4122-8829-14eebe73cd6b">
+              <TableID>dbo_vTimeSeries</TableID>
+              <ColumnID>Amount</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="cf393a1f-9a1e-44a6-a5ff-b9efc31a6ece">
+          <ID>Calendar Year - v Time Series</ID>
+          <Name>Calendar Year - v Time Series</Name>
+          <Source dwd:design-time-name="b8086842-31f6-4264-ad3c-2851ccf571d9">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="2f8e2846-84a6-4b60-9754-35b16e808737">
+              <TableID>dbo_vTimeSeries</TableID>
+              <ColumnID>CalendarYear</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="aa7848b7-ec5d-405f-a719-ad14f3564d21">
+          <ID>Month - v Time Series</ID>
+          <Name>Month - v Time Series</Name>
+          <Source dwd:design-time-name="504ad9c9-c020-442e-9512-436bd9c1c649">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ffc1925a-735c-4f78-9693-6f3d2a099920">
+              <TableID>dbo_vTimeSeries</TableID>
+              <ColumnID>Month</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="fa264188-37f5-4c8d-a750-25e785bdd712">
+          <ID>v Time Series Count</ID>
+          <Name>v Time Series Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="7b97d90c-54cc-451a-be57-063f8028bc12">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="47e7a84a-264c-4035-b294-49fe3b9a02d9">
+              <TableID>dbo_vTimeSeries</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="8e59c504-53ba-49f7-bef5-9d33d5d12805">
+          <CubeDimensionID>v Time Series</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="bf5475df-5c5c-4d5a-8ab2-8e840b9de0de">
+              <AttributeID>Time Index</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d6a95697-4720-4716-bd13-c000e04f496c">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3d48245f-a167-403c-aa11-f4a228924cb0">
+                    <TableID>dbo_vTimeSeries</TableID>
+                    <ColumnID>TimeIndex</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="1fce85e8-4e2c-4761-b969-6abe330ce6a5">
+      <ID>Prospective Buyer</ID>
+      <Name>Prospective Buyer</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="2a159b22-2ba7-47c7-91e2-76918bfa6260">
+          <ID>Yearly Income - Prospective Buyer</ID>
+          <Name>Yearly Income - Prospective Buyer</Name>
+          <Source dwd:design-time-name="e3b7424a-fd5f-4910-adfc-cc9e14c9d01f">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="4b4c03e6-7d8c-4790-b8fb-c0c4729d2da9">
+              <TableID>dbo_ProspectiveBuyer</TableID>
+              <ColumnID>YearlyIncome</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="14ccda6a-3f85-4ffe-b4c0-bf5312cac022">
+          <ID>Total Children - Prospective Buyer</ID>
+          <Name>Total Children - Prospective Buyer</Name>
+          <Source dwd:design-time-name="4eaf5555-fb6d-4b27-be98-f42e39e1ccba">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="d412e765-e257-46cf-91cd-a4e9ff86b8aa">
+              <TableID>dbo_ProspectiveBuyer</TableID>
+              <ColumnID>TotalChildren</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="c6427aad-e889-4cbc-82ec-dd1f6f529d31">
+          <ID>Number Children At Home - Prospective Buyer</ID>
+          <Name>Number Children At Home - Prospective Buyer</Name>
+          <Source dwd:design-time-name="4983b463-d290-45e8-ac40-a3591db022e9">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="970f4b28-8b79-4d4a-a360-235f5031087e">
+              <TableID>dbo_ProspectiveBuyer</TableID>
+              <ColumnID>NumberChildrenAtHome</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="7fe3bb0f-0e6d-48f0-ab13-512f53a55925">
+          <ID>Number Cars Owned - Prospective Buyer</ID>
+          <Name>Number Cars Owned - Prospective Buyer</Name>
+          <Source dwd:design-time-name="dd2ecca0-4a04-4a38-ad83-d8d1af455a7d">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="b4f461b1-6986-407e-9636-60a6cd475afa">
+              <TableID>dbo_ProspectiveBuyer</TableID>
+              <ColumnID>NumberCarsOwned</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="76f6d440-3ae1-426e-b755-04b7fbfc3ae9">
+          <ID>Unknown</ID>
+          <Name>Unknown</Name>
+          <Source dwd:design-time-name="1468c83c-5848-4fdb-b77f-be4b39d6197f">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="038208f1-a8cb-42e9-a875-b871a45ca195">
+              <TableID>dbo_ProspectiveBuyer</TableID>
+              <ColumnID>Unknown</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="0e92c4dd-f0f6-45b2-b344-a2630ed602c7">
+          <ID>Prospective Buyer Count</ID>
+          <Name>Prospective Buyer Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="4c2aa5c4-c8a3-4b18-9913-f9286a29f84a">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="38d2f000-b533-4c78-b5d6-270b2215b3aa">
+              <TableID>dbo_ProspectiveBuyer</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="b5d3d995-bb69-4f99-8a14-8e1383560740">
+          <CubeDimensionID>Prospective Buyer</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="155c2be8-94e6-41f1-888d-e1695dad0852">
+              <AttributeID>Prospective Buyer Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7963f610-a405-44f0-ab92-c82bf7aa1ec4">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2cc88288-9fa3-4b33-b932-4f4eac38013d">
+                    <TableID>dbo_ProspectiveBuyer</TableID>
+                    <ColumnID>ProspectiveBuyerKey</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="280c19b7-06d7-4748-b9e9-2fd5c974dfc1">
+    <DataSourceViewID>Adventure Works view</DataSourceViewID>
+  </Source>
+</Cube>

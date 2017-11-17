@@ -1,0 +1,166 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>Cubul de date</Database>
+    <Server>STEFAN\STEFAN</Server>
+    <ConnectionString>DataSource=STEFAN\STEFAN;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>PoGZb8i8Nhd+G6BmpP5opRWzr0E=11-May-17 21:00:2911-May-17 21:00:28</TimeStamp>
+        <ID>
+          <String>Foodmart 2000</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>AGVHTjIVYJKYaFhRjFysCbXoG8s=11-May-17 21:29:0311-May-17 21:29:03</TimeStamp>
+        <ID>
+          <String>Adventure Works DW2012</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>AjWG0i7JqcKyKVXhVwFPXgqtyJE=12-May-17 15:12:0111-May-17 22:04:55</TimeStamp>
+        <ID>
+          <String>Adventure Works DW2012</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>k7IwCjcYRfoDP1jhPoa2mNq9euE=12-May-17 15:05:5812-May-17 15:05:54</TimeStamp>
+        <ID>
+          <String>Adventure Works DW2012 Finance</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>FQOXnGdY+rbLV+MffhUwgGFbydM=12-May-17 15:07:3412-May-17 15:07:30</TimeStamp>
+        <ID>
+          <String>Adventure Works DW2012 ProductInvetory</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>g/FbYPD1veFhoMAfvk16k7ENZbQ=12-May-17 12:10:3012-May-17 12:10:14</TimeStamp>
+        <ID>
+          <String>Dim Sales Territory</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>5+rcJ9x724LJxwtxHXItORDROVg=12-May-17 12:13:5512-May-17 12:13:49</TimeStamp>
+        <ID>
+          <String>Dim Currency</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>0lj52NAifDQ/qJ+HenqaafMJqxg=12-May-17 12:19:2112-May-17 12:15:35</TimeStamp>
+        <ID>
+          <String>Dim Product</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>jQG1obvHLNcB8ZP2FLKG+oZ/XsU=12-May-17 12:21:1212-May-17 12:20:42</TimeStamp>
+        <ID>
+          <String>Dim Reseller</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>lE+JjKWYkO05SQo6rV2HegiLqoY=12-May-17 12:23:0312-May-17 12:22:31</TimeStamp>
+        <ID>
+          <String>Dim Date</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>0mvpgms4qQ2o491mVspcibNEdyY=12-May-17 12:34:2112-May-17 12:24:03</TimeStamp>
+        <ID>
+          <String>Dim Promotion</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>29dhMGoBoR0cZZRtUMs0iYX8tTI=12-May-17 12:26:1112-May-17 12:25:48</TimeStamp>
+        <ID>
+          <String>Dim Employee</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>r/nwpPMNiS7ooJ08s/2FcemPiw4=12-May-17 12:37:1012-May-17 12:37:10</TimeStamp>
+        <ID>
+          <String>Fact Reseller Sales</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>hapSgveYY0LM1jI+OdGIb9Fmayc=12-May-17 15:12:0112-May-17 15:12:01</TimeStamp>
+        <ID>
+          <String>Fact Finance</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>LTVB1HUGPFfvFFBxifFCU9JdK/o=12-May-17 15:13:1312-May-17 15:13:02</TimeStamp>
+        <ID>
+          <String>Dim Account</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>0SI7CMCxXuf7aEASnXSDdy4iVe4=12-May-17 15:14:1512-May-17 15:14:15</TimeStamp>
+        <ID>
+          <String>Fact Product Inventory</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>zeeiHcTe9DWwTUcQTrCVfzU7nuo=12-May-17 15:15:0112-May-17 15:15:00IEvJFvIPafRndCKz4TDKdVaSA9g=12-May-17 15:15:0112-May-17 15:15:00</TimeStamp>
+        <ID>
+          <String>Cubul Reseller</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>0aFq8LCLEp1z2pNRU/S/yQSCpaw=12-May-17 15:16:1612-May-17 15:16:16zd+BIvfDGPAu0J+koBMwOnN4z54=12-May-17 15:16:1712-May-17 15:16:16</TimeStamp>
+        <ID>
+          <String>Cubul Finance</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>Qhp+kXW07yaLE0LtcG2k2g0lb28=12-May-17 15:17:4412-May-17 15:16:36ChKLaDzNcpJK58MQf74StLOaqRk=12-May-17 15:16:3712-May-17 15:16:37</TimeStamp>
+        <ID>
+          <String>Adventure Works DW2012 ProductInvetory</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>kRd9slbjmtuYPV7kNr4ywPD+lyk=11-May-17 18:56:0311-May-17 18:56:02</TimeStamp>
+      <ID>
+        <String>Cubul de date</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2017-05-12T12:18:03.38Z</LastDeployed>
+</DeploymentSnapshot>

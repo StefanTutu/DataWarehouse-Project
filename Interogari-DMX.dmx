@@ -1,0 +1,133 @@
+
+// 1.Care este probabilitatea pentru un barbat de 40 de ani, cu diploma de 
+// absolvire, detine cel putin o masina, 5 copii, 100.000 $ venit si locuieste
+// in America de North sa cumpere o bibicleta.
+SELECT
+  [v Target Mail].[Bike Buyer],
+  PredictProbability([v Target Mail].[Bike Buyer],1)
+From
+  [v Target Mail]
+NATURAL PREDICTION JOIN
+(SELECT 40 AS [Age],
+  'Graduate Degree' AS [English Education],
+  1 AS [Number Cars Owned],
+  'North America' AS [Region],
+  5 AS [Total Children],
+  100000 AS [Yearly Income]) AS t;
+
+// 2.Indicam probabilitatea de a cumpara o bicicleta 
+//(0 - nu cumpara, 1 se va cumpara)
+SELECT
+t.[LastName],
+t.[FirstName],
+[v Target Mail].[Bike Buyer],
+PredictProbability([Bike Buyer])
+from [v Target Mail]
+PREDICTION JOIN
+OPENQUERY([Cubul Data Mining],
+'SELECT
+[LastName], [FirstName], [MaritalStatus], [YearlyIncome], [TotalChildren], [NumberCarsOwned]
+FROM [dbo].[ProspectiveBuyer]') AS t
+ON
+[v Target Mail].[Marital Status] = t.[MaritalStatus] AND
+[v Target Mail].[Yearly Income] = t.[YearlyIncome] AND
+[v Target Mail].[Total Children] = t.[TotalChildren] AND
+[v Target Mail].[Number Cars Owned] = t.[NumberCarsOwned];
+
+// 3.Returneaza coloanele pentru tabelel nested ??
+SELECT MODEL_NAME,
+(SELECT ATTRIBUTE_NAME, ATTRIBUTE_VALUE, [SUPPORT] AS t
+FROM NODE_DISTRIBUTION)
+FROM [v Target Mail].CONTENT
+WHERE NODE_TYPE = 1;
+
+// 4.returneaza media, minimul, maximul pentru yearly income
+SELECT DISTINCT [Yearly Income] AS [Average],
+RangeMin([Yearly Income]) AS [Minimum],
+RangeMax([Yearly Income]) AS [Maximum]
+FROM  [v Target Mail];
+
+//5.Probabilitatea in timp real pentru o persoaan sa cumpere o bicicleta
+// cu 60.000 $ venit, casatorit, nici o masina detinuta si 2 copii
+SELECT
+[v Target Mail].[Bike Buyer],
+TopCount(PredictHistogram([Bike Buyer]),$AdjustedProbability,3)
+FROM
+[v Target Mail]
+NATURAL PREDICTION JOIN
+(SELECT 35 AS [Age],
+60000 AS [Yearly Income],
+'M' AS [Marital Status],
+0 AS [Number Cars Owned],
+2 AS [Total Children]) AS t;
+
+//6.Returneaza probabilitatea ca cazul specificat sa aibe loc in cadrul modelului de grupare.
+SELECT
+PredictCaseLikelihood() AS Default_Likelihood,
+PredictCaseLikelihood(NORMALIZED) AS Normalized_Likelihood,
+PredictCaseLikelihood(NONNORMALIZED) AS Raw_Likelihood
+FROM [v Target Mail Cluster]
+NATURAL PREDICTION JOIN
+(SELECT 28 AS [Age],
+0 AS [Total Children],
+'Graduate Degree' AS [Education],
+0 AS [Number Cars Owned]) AS t;
+
+//7.Verificam daca persoana specificata va cumpara o bicicleta si de asemenea verificam,
+//nodeId al nodului la care este cel mai probabil sa faca parte
+SELECT
+[Bike Buyer],
+PredictNodeId([Bike Buyer])
+From
+[v Target Mail]
+NATURAL PREDICTION JOIN
+(SELECT 45 AS [Age],
+'M' AS [Marital Status],
+'Graduate Degree' AS [Education],
+0 AS [Number Cars Owned]) AS t;
+
+//verificam rezultatul
+SELECT
+NODE_CAPTION
+FROM
+[v Target Mail].CONTENT
+WHERE NODE_UNIQUE_NAME= '00000000100';
+
+//8.Folosim o prezicere naturala pentru a stabili daca o persoana poate sa fie un cumparator de bicilceta
+// bazat pe modelul Decision Tree
+SELECT
+[Bike Buyer],
+PredictProbability([Bike Buyer], 1) AS [Bike Buyer = Yes],
+PredictProbability([Bike Buyer], 0) AS [Bike Buyer = No]
+FROM [v Target Mail]
+NATURAL PREDICTION JOIN
+(SELECT 24 AS [Age],
+'M' AS [Marital Status],
+'Graduate Degree' AS [Education],
+0 AS [Number Cars Owned]) AS t;
+
+// 9.Prezicem sectiunea de timp - utilizand funcia Prediction Time Series pentru a 
+// returna o predictie pentru urmatorii 3 pasi de timp, si pentru Seria M200 in 
+// regiunile Europa si Pacific 
+SELECT FLATTENED
+[v Time Series].[Model Region],
+PredictTimeSeries([v Time Series].[Quantity],3)AS t
+FROM [v Time Series]
+WHERE [Model Region] = 'M200 Europe'
+OR [Model Region] = 'M200 Pacific';
+
+
+
+
+
+SELECT FLATTENED [Model Region],(SELECT $Time,[Quantity] as [PREDICTION],PredictVariance([Quantity]) AS[VARIANCE] FROM PredictTimeSeries([Quantity]) AS t) AS t FROM[v Time Series] WHERE[Model Region] = 'M200 Europe' ;
+
+SELECT FLATTENED (SELECT $Time,PredictVariance([Quantity]) AS[VARIANCE],
+[Quantity] as [PREDICTION]
+ FROM PredictTimeSeries([Quantity])
+ AS t) AS t FROM[v Time Series] WHERE[Model Region] = 'M200 Europe' ;
+
+
+SELECT * FROM $SYSTEM.DBSCHEMA_Catalogs;
+SELECT DISTINCT SERVICE_NAME FROM $SYSTEM.DMSCHEMA_mining_models;
+SELECT MODEL_NAME FROM $SYSTEM.DMSCHEMA_MINING_MODELS WHERE SERVICE_NAME = 'Microsoft_Association_Rules';

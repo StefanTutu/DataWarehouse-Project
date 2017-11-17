@@ -1,0 +1,95 @@
+
+//Afisam vanzarile pentru fiecare produs in fiecare tara
+select non empty[Dim Sales Territory].[Sales Territory Country].Children on rows,
+[Measures].[Sales Amount] on columns 
+from [Cubul Reseller];
+
+//In ce cloare produsul se vinde cel mai bine
+select non empty[Dim Product].[Color].Children on rows,
+order([Measures].[Sales Amount],DESC) on columns
+from [Cubul Reseller];
+
+//Care a fost cantitatea comandata intre anii 2005 si 2008
+select {[Order Date].[Calendar Year].&[2005]:[Order Date].[Calendar Year].&[2008]} on columns,
+[Measures].[Order Quantity] on rows
+from [Cubul Reseller];
+
+//Selectam vanzarile pentru fiecare an din luna Mai
+SELECT [Measures].[Sales Amount] ON 0,
+non empty [Order Date].[Hierarchy].Children on 1
+FROM [Cubul Reseller]
+where [Order Date].[English Month Name].&[May];
+
+//Totalul vanzarilor pentru fiecare tara existenta in anul 2008
+with member [Total Quantity] as
+[Measures].[Order Quantity]
+select {[Total Quantity]} on 0,
+non empty(existing ([Dim Sales Territory].[Sales Territory Country].MEMBERS, [Order Date].[Calendar Year].&[2008]))on 1
+from [Cubul Reseller];
+
+//Ce tip de clasa de produse sunt comandate peste cantitatea de 40000
+select [Measures].[Order Quantity] on columns,
+filter([Dim Product].[Class].&[H]:[Dim Product].[Class].&[M],[Measures].[Order Quantity]>40000)on rows
+from [Cubul Reseller];
+
+//Suma totala pentru feicare an pentru feicare regiune
+select non empty{[Order Date].[Calendar Year].[Calendar Year]}*{[Measures].[Sales Amount]}on columns,
+non empty order([Dim Sales Territory].[Sales Territory Region].MEMBERS,
+[Measures].[Sales Amount],DESC)on rows 
+from [Cubul Reseller];
+
+//Care este cantitatea comandata in 2007-2008 (folosind SET)
+with set [2007-2008] as
+{[Order Date].[Calendar Year].&[2007],
+[Order Date].[Calendar Year].&[2008]}
+select [Measures].[Order Quantity] on 0, //columns
+order([2007-2008],[Measures].[Order Quantity],BASC) on 1 // rows
+from [Cubul Reseller];
+
+//Cate biciclete de munte si de drum au fost vandute pentru feicare tip de afacere,
+//Si fiecare clasa (Low, Mediu, High) in fiecare an
+select [Dim Reseller].[Business Type].&[Specialty Bike Shop]:[Dim Reseller].[Business Type].&[Warehouse] *
+[Dim Reseller].[Product Line].&[Mountain]:[Dim Reseller].[Product Line].&[Road] on 0, //columns
+crossjoin ([Order Date].[Hierarchy].[Calendar Year].Members,
+[Dim Product].[Class].&[H]:[Dim Product].[Class].&[M]) on 1 //rows
+from [Cubul Reseller];
+
+//Top 3 vanzari pe tari
+select [Measures].[Sales Amount] on 0,
+topcount ({[Dim Sales Territory].[Sales Territory Region].&[Australia]:
+[Dim Sales Territory].[Sales Territory Region].&[United Kingdom]*
+[Order Date].[Calendar Year].&[2008]},3,[Measures].[Sales Amount])on 1
+from [Cubul Reseller];
+
+
+//Cele mai slabe 3 tari la vanzari
+select [Measures].[Sales Amount] on 0,
+BottomCount ({[Dim Sales Territory].[Sales Territory Region].&[Australia]:
+[Dim Sales Territory].[Sales Territory Region].&[Germany]*
+[Order Date].[Calendar Year].&[2008]},3,[Measures].[Sales Amount])on 1
+from [Cubul Reseller];
+
+//Calculam pretul mediu al unui articol pe fiecare an 
+with member price as
+([Measures].[Sales Amount]/[Measures].[Order Quantity])
+select price on columns,
+nonempty([Order Date].[Calendar Year].ALLMEMBERS) on rows 
+from [Cubul Reseller];
+
+
+
+
+select {[Order Date].[Calendar Year].&[2005]:[Order Date].[Calendar Year].&[2008]} on columns,
+                {[Measures].[Unit Price],[Measures].[Product Standard Cost]} on rows from [Cubul Reseller]
+;
+
+select [Measures].[Sales Amount] on rows,
+[Dim Product].[Class] on columns from [Cubul Reseller];
+
+select non empty [Order Date].[All].Children ON rows,
+  non empty [Dim Product].[All].children on columns from [Cubul Reseller]
+  where [Measures].[Unit Price];
+
+select non empty [Order Date].[All].Children ON rows,
+ non empty [Dim Sales Territory].[All].children on columns from [Cubul Reseller]
+ where [Measures].[Unit Price];

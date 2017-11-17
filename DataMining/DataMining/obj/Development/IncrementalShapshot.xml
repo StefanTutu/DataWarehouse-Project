@@ -1,0 +1,124 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>DataMining</Database>
+    <Server>STEFAN\STEFAN</Server>
+    <ConnectionString>DataSource=STEFAN\STEFAN;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>8d8Kem70tN4S/wQtkCgGyu33YLU=14-May-17 23:50:1314-May-17 23:50:12</TimeStamp>
+        <ID>
+          <String>Adventure Works Data source</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>sZuYRnmn7o0Sve4lJ+NfuOCe9go=15-May-17 01:07:0814-May-17 23:51:37</TimeStamp>
+        <ID>
+          <String>Adventure Works view</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>GUmev/uaN9lPUE1MVl87BFsZ92k=15-May-17 01:07:0815-May-17 01:07:07</TimeStamp>
+        <ID>
+          <String>Prospective Buyer</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>QU1L/mQ+Zvcbo/AwCdPVT2ryFVU=15-May-17 01:11:2215-May-17 01:11:22</TimeStamp>
+        <ID>
+          <String>v Assoc Seq Line Items</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>xR/D70585xAu4awSv4Pb99+c+bY=15-May-17 01:12:0915-May-17 01:12:08</TimeStamp>
+        <ID>
+          <String>v DM Prep</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>sATybu+ZGL7psqEM7zNxRfU74YI=15-May-17 01:16:3415-May-17 01:12:43</TimeStamp>
+        <ID>
+          <String>v Time Series</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>6d3M8NtLWQKucDWz2aWPn78eBt0=15-May-17 11:26:1115-May-17 11:26:11</TimeStamp>
+        <ID>
+          <String>v Assoc Seq Orders</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>2dvxoMEsp4+lD/WK2lW1GViGGqw=15-May-17 11:30:5215-May-17 11:30:52</TimeStamp>
+        <ID>
+          <String>v Target Mail</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>qCnqBWuHngGgDT+oIHwcUhJAnbM=15-May-17 11:32:0715-May-17 11:32:0670GYGoPBBE8qvz8dGiOh6YPp8ho=15-May-17 11:32:0715-May-17 11:32:06</TimeStamp>
+        <ID>
+          <String>Cubul Data Mining</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.MiningStructure</Type>
+        <TimeStamp>VfFX+U0sxatataRHqk0yGP+Os5w=15-May-17 10:32:2415-May-17 00:40:39</TimeStamp>
+        <ID>
+          <String>Cluster</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.MiningStructure</Type>
+        <TimeStamp>ixtMe0auCI2RxT03z8esXvJJWFo=15-May-17 12:59:2815-May-17 00:44:22</TimeStamp>
+        <ID>
+          <String>Time Series</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.MiningStructure</Type>
+        <TimeStamp>997AGsMgsK/QDnlg+wFQSIcWzTQ=15-May-17 10:35:4115-May-17 01:02:58</TimeStamp>
+        <ID>
+          <String>Association Rules</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.MiningStructure</Type>
+        <TimeStamp>Mu5730PFDZvnMs7YK8+bKetJc14=15-May-17 13:00:1615-May-17 10:52:06</TimeStamp>
+        <ID>
+          <String>Decision tree</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>Klhe8J58n7Cy5wGp3TrgrKp/F2w=14-May-17 23:48:2914-May-17 23:48:29</TimeStamp>
+      <ID>
+        <String>DataMining</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2017-05-15T10:00:34.886667Z</LastDeployed>
+</DeploymentSnapshot>
